@@ -52,29 +52,3 @@ GROUP BY
 
 
 
---1.The view should clearly show the total exposure per fund and provide insight into what is driving that exposurE---CREATE VIEW QR AS (
---SELECT 
---	Fund_Name, 
---		SUM(Exposure_Base_Currency) AS Total_Exposure
---  FROM .[dbo].[Large_MultiDim_Investment_Dataset]
---  WHERE Report_Date LIKE '%2024%'
---  GROUP BY Fund_Name
---  ORDER BY Total_Exposure
-
-----2.including how it is split across sectors
---SELECT 
---	Fund_Name, 
---	[Bloomberg_Sector_L1],
---    [Bloomberg_Sector_L2],
---		SUM(Exposure_Base_Currency) AS Total_Exposure
---  FROM .[dbo].[Large_MultiDim_Investment_Dataset]
---  WHERE Report_Date LIKE '%2024%'
---  GROUP BY Fund_Name,
---           [Bloomberg_Sector_L1],
---           [Bloomberg_Sector_L2]
---  ORDER BY Total_Exposure
---  )
-
-
---SELECT *
--- FROM .[dbo].[Large_MultiDim_Investment_Dataset]
